@@ -13,6 +13,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Preahvihear&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow&family=Inter&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
 </head>
 
 <body>
@@ -22,15 +25,17 @@
         <div class="clk_img">
           <!-- <img src="clock_logo.png" alt="clock"> -->
         </div>
-        <div class="msg-1">
+        <!-- <div class="msg-1">
           <p>The message and Image will change according to the time</p>
-        </div>
+        </div> -->
       </div>
       <div class="dropdown">
         <div class="dropd">
           <div class="drop">
+            <div class="icon">
             <span><img src="wake_up.png" alt="sun"> </span>
             <label for="wakeup" class="label1">Set wake up time</label>
+          </div>
             <select class="dd1" name="Set Wake up time">
               <option value="">8AM - 9AM</option>
               <option value="">9AM - 10 AM</option>
@@ -41,8 +46,10 @@
           </div>
           <br>
           <div class="drop">
+            <div class="icon">
             <span><img src="lunch_time.png" alt=""></span>
-            <label for="lunch">Set lunch time</label>
+            <label for="lunch" class="label1">Set lunch time</label>
+          </div>
             <select class="dd1" name="">
               <option value="">8AM - 9AM</option>
               <option value="">9AM - 10 AM</option>
@@ -53,8 +60,10 @@
           </div>
           <br>
           <div class="drop">
+            <div class="icon">
             <span><img src="nap_time.png" alt=""></span>
-            <label for="nap"> Set nap time</label>
+            <label for="nap" class="label1"> Set nap time</label>
+          </div>
             <select class="dd1" name="">
               <option value="">2PM - 3PM</option>
               <option value="">3PM - 4PM</option>
@@ -65,8 +74,10 @@
           </div>
           <br>
           <div class="drop">
-
-            <label for="night"><img src="night_time.png" alt=""> Set night time</label>
+            <div class="icon">
+            <span class="material-icons" style="color: #3D087B ;">bedtime</span>
+            <label for="night" class="label1">Set night time</label>
+          </div>
             <select class="dd1" name="">
               <option value="">2PM - 3PM</option>
               <option value="">3PM - 4PM</option>
@@ -91,9 +102,9 @@
             </div>
           </div>
         </div>
-        <div class="msg-2">
+        <!-- <div class="msg-2">
           <div class="m1">Time will be updated here after clicking on "Set Alarm"</div>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -105,11 +116,11 @@
         <div class="time">
           <div class="timer">
             <span class="colon">TIME</span>
-            <div class="t"><span class="hours">10 Hours</span> </div>
+            <div class="t"><span class="hours h">10 </span> <span class="hours">hours</span> </div>
             <span class="colon">:</span>
-            <div class="t"><span class="hours">00 Mins</span> </div>
+            <div class="t"><span class="hours h">00</span><span class="hours">mins</span> </div>
             <span class="colon">:</span>
-            <div class="t"><span class="hours">01 Secs</span> </div>
+            <div class="t"><span class="hours h">01</span> <span class="hours">sec</span> </div>
             <div class="meridian"><span class="am">AM</span></div>
           </div>
           </div>

@@ -35,9 +35,9 @@ function timerfn(){
         image.style.backgroundImage = "URL('lunch_image.png')";
       }
 
-      else if (hrs>8 && hrs<=12 && ampm=="PM"){
+      else if (hrs>=8 && hrs<=12 && ampm=="PM"){
         messageOne.innerText = "GOOD NIGHT !!";
-        messageTwo.innerText = "CLOSE YOUR EYES AND GO TO SLEEP"
+        messageTwo.innerText = "CLOSE YOUR EYES AND GO TO SLEEP";
         image.style.backgroundImage = "URL('Component_32.png')";
       }
 

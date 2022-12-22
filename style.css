@@ -98,6 +98,7 @@
   border: 1px solid #EDEDED;
   border-radius: 10px;
   opacity: 0.23;
+  
 }
 
 .goodm {
@@ -110,13 +111,11 @@
   margin-top: 3.5%;
 }
 
-.alarm {
+
+.set-alarm {
   width: 80%;
   margin-top: 2%;
   margin-bottom: 2%;
-}
-
-.set-alarm {
   display: flex;
   justify-content: space-around;
 }
@@ -199,8 +198,9 @@ button {
   border: 1px solid #EDEDED;
   border-radius: 10px;
   opacity: 1;
-  margin-top: 2%;
+  margin-top: 1%;
   align-items: center;
+  display: flex;
 }
 
 .timer {
@@ -208,7 +208,7 @@ button {
   height: 90px;
   display: flex;
   justify-content: space-around;
-  margin-top: 2%;
+  margin-top: 1%;
   margin-left: 5%;
 }
 
@@ -237,22 +237,26 @@ button {
   font-size: 35px;
 }
 
-.meridian {
+#meridian {
   width: 82px;
   height: 90px;
   background: transparent url('AM_svg.png') 0% 0% no-repeat padding-box;
   opacity: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
+  font: normal 40px Barlow;
+  color: #FFFFFF;
+ 
 }
 
-.am {
+/* #am {
   width: 48px;
   height: 43px;
   font: normal 38px Barlow;
   color: #FFFFFF;
   margin-top: 20%;
-}
+} */
 
 .colon {
   font: normal normal 600 20px/32px Manrope;
@@ -261,6 +265,14 @@ button {
   text-transform: uppercase;
   opacity: 1;
   margin-top: 5%;
+}
+.time_Heading{
+  font: normal normal 600 20px/32px Manrope;
+  letter-spacing: 0px;
+  color: #3D087B;
+  text-transform: uppercase;
+  opacity: 1;
+  margin-left: 2%;
 }
 
 .notification {

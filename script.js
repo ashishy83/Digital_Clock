@@ -21,27 +21,29 @@ function timerfn(){
     let secs = date.getSeconds();
     let ampm = hrs >=12 ? "PM" : "AM";
     
-    if (hrs >= 12) {
-        hrs -= 12
-    }
-    if (hrs>=12 && hrs<=4 && ampm=="PM"){
+    if (hrs>=12 && hrs<=16 && ampm=="PM"){
         messageOne.innerHTML = "GOOD AFTERNOON !! TAKE SOME SLEEP";
         messageTwo.innerHTML = "LET'S HAVE SOME LUNCH !!";
         image.style.backgroundImage = "URL('Component_31.jpg')";
       }
-      else if (hrs>4 && hrs<=7 && ampm=="PM"){
+      else if (hrs>16 && hrs<=19 && ampm=="PM"){
         messageOne.innerHTML = "GOOD EVENING !!";
         messageTwo.innerText = "STOP YAWNING, GET SOME TEA.. ITS JUST EVENING!"
         image.style.backgroundImage = "URL('lunch_image.png')";
       }
 
-      else if (hrs>=8 && hrs<=12 && ampm=="PM"){
+      else if (hrs>=20 && hrs<=23 && ampm=="PM"){
         messageOne.innerText = "GOOD NIGHT !!";
         messageTwo.innerText = "CLOSE YOUR EYES AND GO TO SLEEP";
         image.style.backgroundImage = "URL('Component_32.png')";
       }
 
-    
+      if (hrs > 12) {
+            hrs -= 12
+        }
+      // if(hrs == 12){
+      //   hrs = 12;
+      // }
    
     hr.innerText = `${numberFormat(hrs)}`;
     min.innerText =`${numberFormat(mint)}`;

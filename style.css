@@ -1,8 +1,9 @@
 .main-body {
   display: flex;
-  justify-content: space-around;
-  /* width: 85%; */
-  margin: 2%;
+  justify-content: space-between;
+  align-content: stretch;
+  width: 100%;
+  /* margin: 2%; */
   background-color: #3D087B;
 }
 
@@ -183,16 +184,16 @@ button {
 
 .big-img {
   background-image: url("Component30.png");
-  width: 536px;
+  width: 100%;
   height: 341px;
   background-repeat: no-repeat;
   margin-top: 5%;
+  background-size: contain;
 }
 
 .time {
-  /* position: relative;   */
-  /* z-index: 0; */
-  width: 536px;
+  
+  width: 100%;
   height: 120px;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border: 1px solid #EDEDED;
@@ -276,7 +277,7 @@ button {
 }
 
 .notification {
-  width: 536px;
+  width: 100%;
   height: 118px;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border: 1px solid #EDEDED;
@@ -284,7 +285,7 @@ button {
   opacity: 1;
   margin-top: 8%;
   display: flex;
-  justify-content: center;
+  
 }
 
 .text {
@@ -295,28 +296,27 @@ button {
   text-transform: uppercase;
   opacity: 1;
   margin-top: 5%;
+  display: flex;
+  justify-content: center;
+ 
 }
 
 .bg1 {
-  position: absolute;
-  z-index: -1;
-  top: 80px;
-  left: 835px;
-  width: 415px;
-  height: 130px;
+  width: 90%;
+  height: 20px;
   background: #FFFFFF 0% 0% no-repeat padding-box;
-  border-radius: 10px;
+  border-radius: 8px;
   opacity: 0.71;
+  margin-left: 5%;
+  margin-top: -10px;
 }
 
 .bg2 {
-  position: absolute;
-  z-index: -3;
-  top: 90px;
-  left: 850px;
-  width: 379px;
-  height: 130px;
+  width: 80%;
+  height: 15px;
   background: #FFFFFF 0% 0% no-repeat padding-box;
-  border-radius: 10px;
+  border-radius: 8px;
   opacity: 0.22;
+  margin-left: 10%;
+  margin-top: -10px;
 }

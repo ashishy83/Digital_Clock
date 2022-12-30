@@ -1,6 +1,3 @@
-
-
-
 function numberFormat(n){
     return n > 9 ? "" + n: "0" + n;
 }
@@ -12,7 +9,6 @@ let messageTwo = document.getElementById("notification");
 let image = document.getElementById("big-img");
 let am = document.getElementById("meridian");
 
-
 function timerfn(){
 
     let date = new Date();
@@ -20,31 +16,26 @@ function timerfn(){
     let mint = date.getMinutes();
     let secs = date.getSeconds();
     let ampm = hrs >=12 ? "PM" : "AM";
+
+      if(hrs<=8 && ampm=="AM"){
+        messageTwo.innerHTML = "GRAB SOME HEALTHY BREAKFAST!!!";
+      }
     
-    if (hrs>=12 && hrs<=16 && ampm=="PM"){
-        messageOne.innerHTML = "GOOD AFTERNOON !! TAKE SOME SLEEP";
+      else if (hrs>=12 && hrs<=16 && ampm=="PM"){
         messageTwo.innerHTML = "LET'S HAVE SOME LUNCH !!";
-        image.style.backgroundImage = "URL('Component_31.jpg')";
       }
       else if (hrs>16 && hrs<=19 && ampm=="PM"){
-        messageOne.innerHTML = "GOOD EVENING !!";
         messageTwo.innerText = "STOP YAWNING, GET SOME TEA.. ITS JUST EVENING!"
-        image.style.backgroundImage = "URL('lunch_image.png')";
       }
 
       else if (hrs>=20 && hrs<=23 && ampm=="PM"){
-        messageOne.innerText = "GOOD NIGHT !!";
         messageTwo.innerText = "CLOSE YOUR EYES AND GO TO SLEEP";
-        image.style.backgroundImage = "URL('Component_32.png')";
       }
 
       if (hrs > 12) {
             hrs -= 12
         }
-      // if(hrs == 12){
-      //   hrs = 12;
-      // }
-   
+    
     hr.innerText = `${numberFormat(hrs)}`;
     min.innerText =`${numberFormat(mint)}`;
     sec.innerText = `${numberFormat(secs)}`;
@@ -55,7 +46,6 @@ function timerfn(){
 
 timerfn();
 
-
 let setAlarm = document.getElementById("alarmBtn");
 setAlarm.addEventListener("click",function(){
     setAlarm.style.border = "groove red";
@@ -63,90 +53,38 @@ setAlarm.addEventListener("click",function(){
     let dd2 = document.getElementById("dd2");
     let dd3 = document.getElementById("dd3");
     let dd4 = document.getElementById("dd4");
+    document.getElementById("wakeTime").innerText = dd1.options[dd1.selectedIndex].innerHTML;
+    document.getElementById("luchTime").innerText = dd2.options[dd2.selectedIndex].innerHTML;
+    document.getElementById("napTime").innerText = dd3.options[dd3.selectedIndex].innerHTML;
+    document.getElementById("nightTime").innerText = dd4.options[dd4.selectedIndex].innerHTML;
 
-    let wakeTime = document.getElementById("wakeTime");
-    wakeTime.innerText = dd1.options[dd1.selectedIndex].innerHTML;
+    let time = new Date();
+    let hourhand = time.getHours(); 
+    let wakeupTimeArr=dd1.value;
+    let lunchTimeArr=dd2.value;
+    let napTimeArr =dd3.value;
+    let nightTimeArr=dd4.value;
+
+    if(wakeupTimeArr==hourhand){
+        messageOne.innerHTML = "GOOD MORNING!! WAKE UP !!";
+        image.style.backgroundImage = "URL('Component30.png')";    
+    }
+    else if(lunchTimeArr==hourhand){
+        messageOne.innerHTML = "GOOD AFTERNOON !! TAKE SOME SLEEP";
+        image.style.backgroundImage = "URL('Component_31.jpg')";
+    }
+    else if(napTimeArr==hourhand){
+        messageOne.innerText="STOP YAWNING, GET SOME TEA.. ITS JUST EVENING!";
+        image.style.backgroundImage = "URL('lunch_image.png')";    
+    }
+    else if(nightTimeArr==hourhand){
+        messageOne.innerText="CLOSE YOUR EYES AND GO TO SLEEP";
+        image.style.backgroundImage = "URL('Component_32.png')";     
+    }
+    else{
+        messageOne.innerText="Select time and click on set alarm ";
+        image.style.backgroundImage = "url('random.jpg')";
+        image.style.backgroundSize = "contain";
+    }
    
-    let luchTime = document.getElementById("luchTime");
-    luchTime.innerText = dd2.options[dd2.selectedIndex].innerHTML;
-
-    let napTime = document.getElementById("napTime");
-    napTime.innerText = dd3.options[dd3.selectedIndex].innerHTML;
-
-    let nightTime = document.getElementById("nightTime");
-    nightTime.innerText = dd4.options[dd4.selectedIndex].innerHTML;
-
-
 });
-
-// function timerfn(){
-
-//     let date = new Date();
-//     let hrs = date.getHours();
-//     // let min = date.getMinutes();
-//     // let sec = date.getSeconds();
-    
-//     if(hrs >= 12){
-//         let am = document.getElementById("meridian");
-//         am.innerText = "PM"
-//     }
-//     // else if(hr >= 0 && hr < 8){
-        
-//     // messageOne.innerText = "GOOD NIGHT !!";
-//     // messageTwo.innerText = "CLOSE YOUR EYES AND GO TO SLEEP"
-//     // image.style.backgroundImage = "URL('Component_32.png')";
-//     // }
-
-//     // else if(hr > 12 && hr <=16 && min >1){
-//     // messageOne.innerText = "GOOD AFTERNOON !! TAKE SOME SLEEP";
-//     // messageTwo.innerText = "LET'S HAVE SOME LUNCH !!";
-//     // image.style.backgroundImage = "URL('Component_31.jpg')";
-//     // }
-
-//     // else if(hr > 16 && hr <=19){
-//     // messageOne.innerText = "GOOD EVENING !!";
-//     // messageTwo.innerText = "STOP YAWNING, GET SOME TEA.. ITS JUST EVENING!"
-//     // image.style.backgroundImage = "URL('lunch_image.png')";
-//     // }
-
-
-//     else{
-//         let am = document.getElementById("meridian");
-//         am.innerText = "AM"
-//     }
-//     return `${numberFormat(hrs)}`  //`${numberFormat(min)}` `${numberFormat(sec)}`;
-    
-
-// };
-// setInterval(function(){
-//         hour.innerText = timerfn();
-//         // min.innerText = timerfn();
-//         // sec.innerText = timerfn();
-//      },1000);
-
-
-
-
-// function timerfn1(){
-//     let date = new Date();
-//     let mint = date.getMinutes();
-//     return `${numberFormat(mint)}`;
-// };
-
-// setInterval(function(){
-//     min.innerText = timerfn1();
-// },1000);
-
-// function timerfn2(){
-//     let date = new Date();
-//     let secs = date.getSeconds();
-//     return `${numberFormat(secs)}`;
-// };
-
-// setInterval(function(){
-//     sec.innerText = timerfn2();
-// },1000);
-   
-
-
-

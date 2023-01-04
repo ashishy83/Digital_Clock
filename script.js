@@ -82,7 +82,7 @@ setAlarm.addEventListener("click",function(){
         image.style.backgroundImage = "URL('Component_32.png')";     
     }
     else{
-        messageOne.innerText="Select time and click on set alarm ";
+        messageOne.innerText="Select time & set alarm ";
         image.style.backgroundImage = "url('random.jpg')";
         image.style.backgroundSize = "contain";
     }

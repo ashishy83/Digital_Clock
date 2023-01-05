@@ -17,14 +17,14 @@ function timerfn(){
     let secs = date.getSeconds();
     let ampm = hrs >=12 ? "PM" : "AM";
 
-      if(hrs<=8 && ampm=="AM"){
+      if(hrs<=8 && hrs<=11 && ampm=="AM"){
         messageTwo.innerHTML = "GRAB SOME HEALTHY BREAKFAST!!!";
       }
     
-      else if (hrs>=12 && hrs<=16 && ampm=="PM"){
+      else if (hrs>=12 && hrs<=15 && ampm=="PM"){
         messageTwo.innerHTML = "LET'S HAVE SOME LUNCH !!";
       }
-      else if (hrs>16 && hrs<=19 && ampm=="PM"){
+      else if (hrs>=16 && hrs<=19 && ampm=="PM"){
         messageTwo.innerText = "STOP YAWNING, GET SOME TEA.. ITS JUST EVENING!"
       }
 

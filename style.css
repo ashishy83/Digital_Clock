@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-content: stretch;
-  width: 100%;
+  /* width: 100%; */
   /* margin: 2%; */
   background-color: #3D087B;
 }
@@ -319,4 +319,23 @@ button {
   opacity: 0.22;
   margin-left: 10%;
   margin-top: -10px;
+}
+
+
+@media (min-width: 480px) and (max-width: 720px) {
+
+  .main-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .right-body{
+    width: 100%;
+    
+    justify-content: center;
+  }
+  .left-body{
+    width: 100%;
+  }
 }
